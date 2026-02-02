@@ -20,7 +20,8 @@ const renderText = (text, className, baseWeight = 400) => {
 };
 
 const setUpTextHoverAnimation = (container, type) => {
-  if (!container) return;
+  // If the ref isn't ready, return a no-op cleanup to avoid errors.
+  if (!container) return () => {};
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
@@ -72,8 +73,8 @@ const Welcome = () => {
     );
 
     return () => {
-      titleCleanup();
-      subtitleCleanup();
+      if (typeof titleCleanup === "function") titleCleanup();
+      if (typeof subtitleCleanup === "function") subtitleCleanup();
     };
   }, []);
 
