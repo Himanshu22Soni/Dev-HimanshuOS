@@ -1,7 +1,14 @@
 // Day.js formats the live date/time in a consistent, readable way.
 import dayjs from "dayjs";
+// Enable UTC and timezone support so we can force a specific zone (Asia/Kolkata).
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 // Navigation data (links + icons) is centralized in constants for reuse.
 import { navLinks, navIcons } from "#constants";
+
+// Register plugins once so Day.js can handle timezones correctly.
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 /**
  * Navbar Component
@@ -38,8 +45,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/* Live time stamp for a dynamic, personal touch. */}
-        <time>{dayjs().format("ddd MMM D h:mm A")}</time>
+        {/* Live time stamp for a dynamic, personal touch (forced to Asia/Kolkata). */}
+        <time>{dayjs().tz("Asia/Kolkata").format("ddd D MMM h:mm A")}</time>
       </div>
     </nav>
   );
