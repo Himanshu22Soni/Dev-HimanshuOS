@@ -1,6 +1,6 @@
 import React from "react";
 import useFullscreen from "./hooks/useFullscreen";
-import { Navbar, Welcome } from "#components";
+import { Navbar, Welcome, Dock } from "#components";
 
 const App = () => {
   /**
@@ -17,6 +17,7 @@ const App = () => {
     <main>
       <Navbar />
       <Welcome />
+      <Dock />
     </main>
   );
 };
