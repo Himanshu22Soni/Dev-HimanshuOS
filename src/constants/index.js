@@ -101,24 +101,44 @@ const blogPosts = [
 
 const techStack = [
   {
-    category: "Frontend",
-    items: ["React.js", "TypeScript", "JavaScript", "Vite"],
+    category: "Frontend Core",
+    items: ["React.JS", "JavaScript", "TypeScript"],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "State",
+    items: ["Context API", "Redux Toolkit"],
+  },
+  {
+    category: "UI & Motion",
+    items: ["HTML", "Tailwind CSS", "GSAP"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "CSS"],
+    items: ["CSS", "Styled Components"],
   },
   {
-    category: "Database",
-    items: ["MySQL", "Firebase"],
+    category: "Bundlers",
+    items: ["Vite", "Parcel"],
+  },
+  {
+    category: "Testing",
+    items: ["Jest", "Vitest", "RTL"],
   },
   {
     category: "Dev Tools",
     items: ["Git", "GitHub", "VSCode"],
+  },
+  {
+    category: "Code Quality",
+    items: ["ESLint", "Prettier"],
+  },
+  {
+    category: "Deploy",
+    items: ["Vercel", "GitHub Pages"],
+  },
+  {
+    category: "Mobile",
+    items: ["React Native", "Expo"],
   },
 ];
 
@@ -490,7 +510,7 @@ const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
   finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  aboutMe: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },

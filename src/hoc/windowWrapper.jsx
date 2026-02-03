@@ -1,0 +1,58 @@
+import React, { useLayoutEffect, useRef } from "react";
+import useWindowStore from "#store/window";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
+
+const windowWrapper = (Component, windowKey) => {
+  const Wrapped = (props) => {
+    const { windows, focusWindow } = useWindowStore();
+    const { isOpen, zIndex } = windows[windowKey];
+    const ref = useRef(null);
+
+    useGSAP(() => {
+      const el = ref.current;
+      if (!el || !isOpen) return;
+
+      el.style.display = "block";
+
+      gsap.fromTo(
+        el,
+        { opacity: 0, scale: 0.95, y: 40 },
+        { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out", y: 0 },
+      );
+    }, [isOpen]);
+
+    useGSAP(() => {
+      const el = ref.current;
+      if (!el) return;
+
+      const [instance] = Draggable.create(el, {
+        onPress: () => focusWindow(windowKey),
+      });
+
+      return () => {
+        instance.kill();
+      };
+    }, []);
+
+    useLayoutEffect(() => {
+      const el = ref.current;
+      if (!el) return;
+
+      el.style.display = isOpen ? "block" : "none";
+    }, [isOpen]);
+
+    return (
+      <section id={windowKey} ref={ref} style={{ zIndex }} className="absolute">
+        <Component {...props} />
+      </section>
+    );
+  };
+
+  Wrapped.displayName = `windowWrapper(${Component.displayName || Component.name || "Component"})`;
+
+  return Wrapped;
+};
+
+export default windowWrapper;
