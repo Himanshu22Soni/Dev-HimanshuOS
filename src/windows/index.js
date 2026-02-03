@@ -1,3 +1,3 @@
-import Terminal from "./terminal";
+import Terminal from "./Terminal";
 
 export { Terminal };
