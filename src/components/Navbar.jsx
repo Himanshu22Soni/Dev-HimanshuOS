@@ -5,6 +5,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 // Navigation data (links + icons) is centralized in constants for reuse.
 import { navLinks, navIcons } from "#constants";
+import useWindowStore from "#store/window";
 
 // Register plugins once so Day.js can handle timezones correctly.
 dayjs.extend(utc);
@@ -18,6 +19,8 @@ dayjs.extend(timezone);
  * and a live timestamp for a polished, dynamic header.
  */
 const Navbar = () => {
+  const { openWindow } = useWindowStore();
+
   return (
     // Semantic <nav> element helps accessibility and SEO.
     <nav>
@@ -29,7 +32,11 @@ const Navbar = () => {
         <ul>
           {/* Render nav links from data to avoid hardcoding and ease updates. */}
           {navLinks.map((item) => (
-            <li key={item.id} className="nav-link-underline">
+            <li
+              key={item.id}
+              className="nav-link-underline"
+              onClick={() => openWindow(item.type)}
+            >
               {item.name}
             </li>
           ))}

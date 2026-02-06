@@ -43,8 +43,8 @@ const dockApps = [
     canOpen: true,
   },
   {
-    id: "aboutMe",
-    name: "About Me", // was "Safari"
+    id: "safari",
+    name: "Safari", // was "Safari"
     icon: "safari.png",
     canOpen: true,
   },
@@ -77,25 +77,34 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
+    date: "Feb 04, 2026",
     title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+      "What 2.5 Years of Working with React Taught Me as a Frontend Developer",
+    image: "/images/React.png",
+    link: "https://himanshu-tcsdev.blogspot.com/2026/02/what-25-years-of-working-with-react.html",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Feb 04, 2026",
+    title:
+      "Leveling Up in TypeScript: My 2.5-Year Journey from “Any” to Advanced Types",
+    image: "/images/TypeScript.png",
+    link: "https://himanshu-tcsdev.blogspot.com/2026/02/leveling-up-in-typescript-my-25-year.html",
   },
+  // {
+  //   id: 3,
+  //   date: "Feb 04, 2026",
+  //   title: "Building UIs Like a City: What 2.5 Years of Tailwind CSS Taught Me",
+  //   image: "/images/blog2.png",
+  //   link: "https://himanshu-tcsdev.blogspot.com/2026/02/building-uis-like-city-what-25-years-of.html",
+  // },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Feb 04, 2026",
+    title:
+      "Two Build Tools, One Developer: My Journey Between Vite Speed and Parcel Reality",
+    image: "/images/Vite.js.png",
+    link: "https://himanshu-tcsdev.blogspot.com/2026/02/two-build-tools-one-developer-my.html",
   },
 ];
 
@@ -249,25 +258,25 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "YoutubeX.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "YoutubeX is a realistic, performance-focused YouTube clone that mirrors the core browsing and watching experience.",
+            "It features a responsive home feed, video cards, search-ready layout, and smooth UI interactions optimized for speed.",
+            "Think of it like YouTube's familiar interface, rebuilt with clean architecture and attention to real-world UX.",
+            "It's built with modern React tooling and Tailwind CSS for fast rendering, consistent styling, and a polished feel.",
           ],
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "YoutubeX.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://youtube-x-iota.vercel.app/",
           position: "top-10 right-20",
         },
         {
@@ -294,7 +303,7 @@ const WORK_LOCATION = {
     // ▶️ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "Rizzumé.ai",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -311,7 +320,7 @@ const WORK_LOCATION = {
             "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
             "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
             "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "It's built with React.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
           ],
         },
         {
@@ -344,13 +353,65 @@ const WORK_LOCATION = {
       ],
     },
 
-    // ▶️ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Magma Estate",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
+      windowPosition: "top-[33vh] left-7",
+      children: [
+        {
+          id: 1,
+          name: "Food Delivery App Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "food-delivery-app.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "food-delivery-app.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/project-3.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+          position: "top-60 right-20",
+        },
+      ],
+    },
+
+    // ▶️ Project 3
+    {
+      id: 8,
+      name: "Uber Eats Clone",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-60 left-85",
       windowPosition: "top-[33vh] left-7",
       children: [
         {
@@ -441,9 +502,9 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/Himanshu.webp",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "Hey! I’m Himanshu 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
         "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
@@ -512,7 +573,7 @@ const WINDOW_CONFIG = {
   finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  aboutMe: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
