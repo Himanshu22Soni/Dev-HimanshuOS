@@ -70,7 +70,7 @@ const dockApps = [
     id: "trash",
     name: "Archive", // was "Trash"
     icon: "trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
@@ -408,7 +408,7 @@ const WORK_LOCATION = {
     // ▶️ Project 3
     {
       id: 8,
-      name: "Uber Eats Clone",
+      name: "Uber Eats",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-60 left-85",

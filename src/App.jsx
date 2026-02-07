@@ -1,7 +1,7 @@
 import React from "react";
 import gsap from "gsap";
 import useFullscreen from "./hooks/useFullscreen";
-import { Navbar, Welcome, Dock } from "#components";
+import { Navbar, Welcome, Dock, Home } from "#components";
 import { Draggable } from "gsap/Draggable";
 import {
   Terminal,
@@ -11,6 +11,7 @@ import {
   Text,
   Image,
   Contact,
+  Gallery,
 } from "#windows";
 
 gsap.registerPlugin(Draggable);
@@ -37,7 +38,9 @@ const App = () => {
       <Finder />
       <Text />
       <Image />
+      <Gallery />
       <Contact />
+      <Home />
     </main>
   );
 };
