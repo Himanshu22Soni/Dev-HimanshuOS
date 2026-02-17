@@ -7,6 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
+  background-color: #0f172a;
   background-image: url("/images/macos-wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
